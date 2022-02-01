@@ -110,8 +110,8 @@ set $ws1 "1: Terminals"
 set $ws2 "2: Browsers"
 set $ws3 "3 pycharm"
 set $ws4 "4 Meet"
-set $ws5 "5"
-set $ws6 "6"
+set $ws5 "5 clion"
+set $ws6 "6 "
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -145,8 +145,9 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 assign [class="Gnome-terminal"] $ws1
 assign [class="Google-chrome"] $ws2
-assign [class="jetbrains-pycharm"] $ws3
 
+assign [class="jetbrains-pycharm"] $ws3
+assign [class="jetbrains-clion"] $ws5
 
 
 # reload the configuration file
@@ -224,12 +225,15 @@ bindsym $mod+u mode "volume"
 mode "open" {
     bindsym f exec firefox
     bindsym c exec google-chrome
-    bindsym n exec nautilus
     bindsym p exec bash ~/Apps/pycharm-2021.2.2/bin/pycharm.sh
+    bindsym n exec nautilus
+    
+    bindsym b exec brave
+    bindsym l exec clion
+    bindsym g exec gnome-control-center
     bindsym Escape mode "default"
-    bindsym Return mode "default"
-}
 
+}
 mode "volume"{
     bindsym Up exec "amixer  set 'Master' 2%+"
     bindsym k exec "amixer  set 'Master' 2%+"
